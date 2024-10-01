@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1>Добро пожаловать на наш сайт!</h1>
+    <p>Вы можете посетить наш магазин, перейдя по следующей ссылке:</p>
+    <a href="https://ваш-сайт.com">Перейти на мой сайт</a>
+    <header>
+        <div class="logo">Ultra Store</div>
+        <nav>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="cart-button">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="hero">
+        <h1>Welcome to Our Ultra Online Store</h1>
+        <p>Discover the latest trends and unbeatable prices.</p>
+        <a href="#products" class="cta-button">Shop Now</a>
+    </section>
+
+    <main>
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product-grid" id="product-grid">
+                <div class="product">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/ce419581df284bc08616ad2a00801225_9366/Essentials_Warm-Up_3-Stripes_Track_Jacket_Black_H46101_01_laydown.jpg" alt="Essentials Warm-Up Jacket">
+                    <h3>Essentials Warm-Up 3-Stripes Track Jacket</h3>
+                    <p>Price: $55</p>
+                    <button onclick="addToCart('Essentials Warm-Up 3-Stripes Track Jacket')">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/4dd35dde6ccf49a9820aa44a867d4b27_9366/adidas_Originals_90s_Corduroy_Pants_Turquoise_JL6152_21_model.jpg" alt="Adidas Originals Pants">
+                    <h3>Adidas Originals 90s Corduroy Pants</h3>
+                    <p>Price: $100</p>
+                    <button onclick="addToCart('Adidas Originals 90s Corduroy Pants')">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/a80af041214649dba2c5ef839741f166_9366/Ultraboost_5X_Shoes_Blue_JI3019_01_00_standard.jpg" alt="Sneaker">
+                    <h3>Sneaker</h3>
+                    <p>Price: $180</p>
+                    <button onclick="addToCart('Sneaker')">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7de71bfdacbe438188d8d9469f081b2b_9366/Denim_Rhinestone_Jacket_Blue_JN3021_21_model.jpg" alt="Denim Rhinestone Jacket">
+                    <h3>Denim Rhinestone Jacket</h3>              
+                    <p>Price: $140</p>
+                    <button onclick="addToCart('Denim Rhinestone Jacket')">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/2c32e21ebc1c48178752f2a7a5dc62a7_9366/Copa_Pure_2_Elite_Knit_Firm_Ground_Cleats_Purple_IG6398_22_model.jpg" alt="Copa Pure Cleats">  
+                    <h3>Copa Pure 2 Elite Knit Firm Ground Cleats</h3>
+                    <p>Price: $250</p>
+                    <button onclick="addToCart('Copa Pure 2 Elite Knit Firm Ground Cleats')">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/25f8059bde0442578caa6124c7786d73_9366/Supernova_Prima_Running_Shoes_Blue_ID3689_HM3_hover.jpg" alt="Supernova Running Shoes">
+                    <h3>Supernova Prima Running Shoes</h3>
+                    <p>Price: $160</p>
+                    <button onclick="addToCart('Supernova Prima Running Shoes')">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are a leading online store offering a wide range of products at competitive prices.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: turezhanov2007@gmail.com</p>
+        </section>
+
+        <section id="reviews">
+            <h2>User Reviews</h2>
+            <div id="review-form">
+                <h3>Leave a Review</h3>
+                <input type="text" id="review-name" placeholder="Your name">
+                <textarea id="review-text" placeholder="Your review"></textarea>
+                <button onclick="submitReview()">Submit Review</button>
+            </div>
+            <div id="reviews-list"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Ultra Online Store. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    <!-- Modal for add to cart confirmation -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+
+        function addToCart(product) {
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            document.getElementById('modal-message').innerText = product + ' has been added to your cart!';
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        document.getElementById('cart-button').addEventListener('click', function() {
+            window.location.href = 'cart.html'; // Перенаправление на страницу корзины
+        });
+
+        function submitReview() {
+            const name = document.getElementById('review-name').value;
+            const text = document.getElementById('review-text').value;
+            const reviewList = document.getElementById('reviews-list');
+
+            if (name && text) {
+                const review = document.createElement('div');
+                review.innerHTML = `<strong>${name}:</strong> ${text}`;
+                reviewList.appendChild(review);
+                document.getElementById('review-name').value = '';
+                document.getElementById('review-text').value = '';
+            } else {
+                alert('Please fill in both fields.');
+            }
+        }
+    </script>
+</body>
+</html>
