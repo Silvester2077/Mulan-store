@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Ultra Store</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="cart-button">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Your Cart</h1>
+        <div class="cart-container">
+            <ul id="cart-items"></ul>
+            <div class="cart-summary">
+                <p>Total Items: <span id="total-items">0</span></p>
+                <p>Total Price: <span id="total-price">$0.00</span></p>
+            </div>
+        </div>
+        <button class="clear-cart-button" onclick="clearCart()">Clear Cart</button>
+        <button class="checkout-button">Checkout</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ultra Online Store. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script>
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function displayCart() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+            let totalPrice = 0;
+
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                cartItems.appendChild(li);
+
+                // Обновление цены
+                const price = getPrice(item); // Функция для получения цены (определи её ниже)
+                totalPrice += price;
+            });
+
+            document.getElementById('total-items').textContent = cart.length;
+            document.getElementById('total-price').textContent = `$${totalPrice.toFixed(2)}`;
+        }
+
+        function getPrice(item) {
+            // Определите цены для каждого товара
+            const prices = {
+                'Essentials Warm-Up 3-Stripes Track Jacket': 55,
+                'Adidas Originals 90s Corduroy Pants': 100,
+                'Sneaker': 180,
+                'Denim Rhinestone Jacket': 140,
+                'Copa Pure 2 Elite Knit Firm Ground Cleats': 250,
+                'Supernova Prima Running Shoes': 160
+            };
+            return prices[item] || 0;
+        }
+
+        function clearCart() {
+            localStorage.removeItem('cart');
+            displayCart();
+        }
+
+        displayCart();
+    </script>
+</body>
+</html>
