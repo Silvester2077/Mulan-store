@@ -1,47 +1,45 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Cart</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Cart</title>
+<link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-    <header>
-        <div class="logo">Ultra Store</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="cart.html"><img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Cart Icon" style="width: 20px; height: 20px;"> Cart</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <h1>Your Cart</h1>
-        <div class="cart-container">
-            <ul id="cart-items"></ul>
-            <div class="cart-summary">
-                <p>Total Items: <span id="total-items">0</span></p>
-                <p>Total Price: <span id="total-price">$0.00</span></p>
-            </div>
-        </div>
-        <button class="clear-cart-button" onclick="clearCart()">Clear Cart</button>
-        <a href="checkout.html" class="checkout-button">Checkout</a>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Ultra Online Store. All rights reserved.</p>
-        <div class="social-media">
-            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook Icon" style="width: 24px; height: 24px;"></a>
-            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter Icon" style="width: 24px; height: 24px;"></a>
-            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon" style="width: 24px; height: 24px;"></a>
-        </div>
-    </footer>
-
-    <script>
+<header>
+<div class="logo">Ultra Store</div>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="cart.html"><img alt="Cart Icon" src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" style="width: 20px; height: 20px;"/> Cart</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<h1>Your Cart</h1>
+<div class="cart-container">
+<ul id="cart-items"></ul>
+<div class="cart-summary">
+<p>Total Items: <span id="total-items">0</span></p>
+<p>Total Price: <span id="total-price">$0.00</span></p>
+</div>
+</div>
+<button class="clear-cart-button" onclick="clearCart()">Clear Cart</button>
+<a class="checkout-button" href="checkout.html">Checkout</a>
+</main>
+<footer>
+<p>© 2024 Ultra Online Store. All rights reserved.</p>
+<div class="social-media">
+<a href="#"><img alt="Facebook Icon" src="https://cdn-icons-png.flaticon.com/512/733/733547.png" style="width: 24px; height: 24px;"/></a>
+<a href="#"><img alt="Twitter Icon" src="https://cdn-icons-png.flaticon.com/512/733/733579.png" style="width: 24px; height: 24px;"/></a>
+<a href="#"><img alt="LinkedIn Icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" style="width: 24px; height: 24px;"/></a>
+</div>
+</footer>
+<script>
         const cart = JSON.parse(localStorage.getItem('cart'))  [];
 
         function displayCart() {
