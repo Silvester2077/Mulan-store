@@ -2,117 +2,149 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f8f8f8;
 }
 
-header {
+/* Header and Footer Styling */
+header, footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 15px 20px;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-header nav ul li a:hover {
-    color: #ddd;
-}
-
-#hero {
-    background: url('https://example.com/your-image.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.cta-button {
-    background-color: #ff5722;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #e64a19;
-}
-
-main {
     padding: 20px;
+    background-color: #1A1A40; /* Dark Blue */
+    color: white;
 }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
     gap: 20px;
 }
 
-.product {
-    border: 1px solid #ddd;
-    border-radius: 5px;
+nav ul li {
+    margin-left: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section Styling */
+#hero {
+    position: relative;
     text-align: center;
-    padding: 15px;
-    transition: box-shadow 0.3s;
+    padding: 100px 20px;
+    background-image: url('pexels-photo-1134176.jpeg'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* CTA and Action Button Styling */
+.cta-button, .clear-cart-button, .checkout-button, button {
+    background-color: #FFA500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.cta-button:hover, .clear-cart-button:hover, .checkout-button:hover, button:hover {
+    background-color: #FF7F00;
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    margin: 40px auto;
+    padding: 60px 20px;
+    max-width: 800px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #FFA500;
+    margin-bottom: 20px;
+}
+
+/* Product Grid Styling */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: calc(33% - 20px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .product img {
     max-width: 100%;
+    height: auto;
     border-radius: 5px;
 }
 
-.product:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Footer Icons */
+footer .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+.social-media a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
 }
 
-.social-media a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+.social-media a img:hover {
+    transform: scale(1.3);
+    filter: brightness(1.2);
 }
 
+/* Modal Styling */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: white;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 300px;
+    position: relative;
 }
 
 .close {
@@ -120,17 +152,4 @@ footer {
     float: right;
     font-size: 28px;
     font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
 }
