@@ -1,114 +1,126 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultra Online Store</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ultra Online Store</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <header>
-        <div class="logo">Ultra Store</div>
-        <nav>
-            <ul>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#" id="cart-button">Cart</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="hero">
-        <h1>Welcome to Our Ultra Online Store</h1>
-        <p>Discover the latest trends and unbeatable prices.</p>
-        <a href="#products" class="cta-button">Shop Now</a>
-    </section>
+<header>
+<div class="logo">Ultra Store</div>
+<nav>
+<ul>
+<li><a href="#products">Products</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#" id="cart-button">Cart</a></li>
+</ul>
+</nav>
+</header>
+<section id="hero">
+<h1>Welcome to Our Ultra Online Store</h1>
+<p>Discover the latest trends and unbeatable prices.</p>
+<a class="cta-button" href="#products">Shop Now</a>
+</section>
+<main>
+<section id="products">
+<h2>Our Products</h2>
+<div class="product-grid" id="product-grid">
+<div class="product">
+<img alt="Essentials Warm-Up Jacket" src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/ce419581df284bc08616ad2a00801225_9366/Essentials_Warm-Up_3-Stripes_Track_Jacket_Black_H46101_01_laydown.jpg"/>
+<h3>Essentials Warm-Up 3-Stripes Track Jacket</h3>
+<p>Price: $55</p>
+<button onclick="addToCart('Essentials Warm-Up 3-Stripes Track Jacket')">Add to Cart</button>
+</div>
+<div class="product">
+<img alt="Adidas Originals Pants" src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/4dd35dde6ccf49a9820aa44a867d4b27_9366/adidas_Originals_90s_Corduroy_Pants_Turquoise_JL6152_21_model.jpg"/>
+<h3>Adidas Originals 90s Corduroy Pants</h3>
+<p>Price: $100</p>
+<button onclick="addToCart('Adidas Originals 90s Corduroy Pants')">Add to Cart</button>
+</div>
+<div class="product">
+<img alt="Sneaker" src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/a80af041214649dba2c5ef839741f166_9366/Ultraboost_5X_Shoes_Blue_JI3019_01_00_standard.jpg"/>
+<h3>Sneaker</h3>
+<p>Price: $180</p>
+<button onclick="addToCart('Sneaker')">Add to Cart</button>
+</div>
+<div class="product">
+<img alt="Denim Rhinestone Jacket" src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7de71bfdacbe438188d8d9469f081b2b_9366/Denim_Rhinestone_Jacket_Blue_JN3021_21_model.jpg"/>
+<h3>Denim Rhinestone Jacket</h3>
+<p>Price: $140</p>
+<button onclick="addToCart('Denim Rhinestone Jacket')">Add to Cart</button>
+</div>
+<div class="product">
+<img alt="Copa Pure Cleats" src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/2c32e21ebc1c48178752f2a7a5dc62a7_9366/Copa_Pure_2_Elite_Knit_Firm_Ground_Cleats_Purple_IG6398_22_model.jpg"/>
+<h3>Copa Pure 2 Elite Knit Firm Ground Cleats</h3>
+<p>Price: $250</p>
+<button onclick="addToCart('Copa Pure 2 Elite Knit Firm Ground Cleats')">Add to Cart</button>
+</div>
+<div class="product">
+<img alt="Supernova Running Shoes" src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/25f8059bde0442578caa6124c7786d73_9366/Supernova_Prima_Running_Shoes_Blue_ID3689_HM3_hover.jpg"/>
+<h3>Supernova Prima Running Shoes</h3>
+<p>Price: $160</p>
+<button onclick="addToCart('Supernova Prima Running Shoes')">Add to Cart</button>
+</div>
 
-    <main>
-        <section id="products">
-            <h2>Our Products</h2>
-            <div class="product-grid" id="product-grid">
-                <div class="product">
-                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/ce419581df284bc08616ad2a00801225_9366/Essentials_Warm-Up_3-Stripes_Track_Jacket_Black_H46101_01_laydown.jpg" alt="Essentials Warm-Up Jacket">
-                    <h3>Essentials Warm-Up 3-Stripes Track Jacket</h3>
-                    <p>Price: $55</p>
-                    <button onclick="addToCart('Essentials Warm-Up 3-Stripes Track Jacket')">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/4dd35dde6ccf49a9820aa44a867d4b27_9366/adidas_Originals_90s_Corduroy_Pants_Turquoise_JL6152_21_model.jpg" alt="Adidas Originals Pants">
-                    <h3>Adidas Originals 90s Corduroy Pants</h3>
-                    <p>Price: $100</p>
-                    <button onclick="addToCart('Adidas Originals 90s Corduroy Pants')">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/a80af041214649dba2c5ef839741f166_9366/Ultraboost_5X_Shoes_Blue_JI3019_01_00_standard.jpg" alt="Sneaker">
-                    <h3>Sneaker</h3>
-                    <p>Price: $180</p>
-                    <button onclick="addToCart('Sneaker')">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7de71bfdacbe438188d8d9469f081b2b_9366/Denim_Rhinestone_Jacket_Blue_JN3021_21_model.jpg" alt="Denim Rhinestone Jacket">
-                    <h3>Denim Rhinestone Jacket</h3>              
-                    <p>Price: $140</p>
-                    <button onclick="addToCart('Denim Rhinestone Jacket')">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/2c32e21ebc1c48178752f2a7a5dc62a7_9366/Copa_Pure_2_Elite_Knit_Firm_Ground_Cleats_Purple_IG6398_22_model.jpg" alt="Copa Pure Cleats">  
-                    <h3>Copa Pure 2 Elite Knit Firm Ground Cleats</h3>
-                    <p>Price: $250</p>
-                    <button onclick="addToCart('Copa Pure 2 Elite Knit Firm Ground Cleats')">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/25f8059bde0442578caa6124c7786d73_9366/Supernova_Prima_Running_Shoes_Blue_ID3689_HM3_hover.jpg" alt="Supernova Running Shoes">
-                    <h3>Supernova Prima Running Shoes</h3>
-                    <p>Price: $160</p>
-                    <button onclick="addToCart('Supernova Prima Running Shoes')">Add to Cart</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We are a leading online store offering a wide range of products at competitive prices.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: turezhanov2007@gmail.com</p>
-        </section>
-
-        <section id="reviews">
-            <h2>User Reviews</h2>
-            <div id="review-form">
-                <h3>Leave a Review</h3>
-                <input type="text" id="review-name" placeholder="Your name">
-                <textarea id="review-text" placeholder="Your review"></textarea>
-                <button onclick="submitReview()">Submit Review</button>
-            </div>
-            <div id="reviews-list"></div>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024 Ultra Online Store. All rights reserved.</p>
-        <div class="social-media">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
-        </div>
-    </footer>
-
-    <!-- Modal for add to cart confirmation -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <p id="modal-message"></p>
-        </div>
-    </div>
-
-    <script>
+<div class="product">
+<img alt="New Product 1" src="https://example.com/new-product-1.jpg"/>
+<h3>New Product 1</h3>
+<p>Price: $120</p>
+<button onclick="addToCart('New Product 1')">Add to Cart</button>
+</div>
+<div class="product">
+<img alt="New Product 2" src="https://example.com/new-product-2.jpg"/>
+<h3>New Product 2</h3>
+<p>Price: $150</p>
+<button onclick="addToCart('New Product 2')">Add to Cart</button>
+</div>
+<div class="product">
+<img alt="New Product 3" src="https://example.com/new-product-3.jpg"/>
+<h3>New Product 3</h3>
+<p>Price: $200</p>
+<button onclick="addToCart('New Product 3')">Add to Cart</button>
+</div>
+</div>
+</section>
+<section id="about">
+<h2>About Us</h2>
+<p>We are a leading online store offering a wide range of products at competitive prices.</p>
+</section>
+<section id="contact">
+<h2>Contact Us</h2>
+<p>Email: turezhanov2007@gmail.com</p>
+</section>
+<section id="reviews">
+<h2>User Reviews</h2>
+<div id="review-form">
+<h3>Leave a Review</h3>
+<input id="review-name" placeholder="Your name" type="text"/>
+<textarea id="review-text" placeholder="Your review"></textarea>
+<button onclick="submitReview()">Submit Review</button>
+</div>
+<div id="reviews-list"></div>
+</section>
+</main>
+<footer>
+<p>© 2024 Ultra Online Store. All rights reserved.</p>
+<div class="social-media">
+<a href="#">Facebook</a>
+<a href="#">Twitter</a>
+<a href="#">LinkedIn</a>
+</div>
+</footer>
+<!-- Modal for add to cart confirmation -->
+<div class="modal" id="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">×</span>
+<p id="modal-message"></p>
+</div>
+</div>
+<script>
         let cart = [];
 
         function addToCart(product) {
@@ -142,5 +154,30 @@
             }
         }
     </script>
+
+<!-- Modal for product details -->
+<div class="modal" id="product-detail-modal">
+<div class="modal-content">
+<span class="close" onclick="closeDetailModal()">×</span>
+<img alt="Product Image" id="product-detail-image" src=""/>
+<h3 id="product-detail-title"></h3>
+<p id="product-detail-price"></p>
+<p id="product-detail-description">Product description goes here.</p>
+<button onclick="addToCartFromModal()">Add to Cart</button>
+</div>
+</div>
+<script>
+    function showProductDetails(title, price, description, imageUrl) {
+        document.getElementById('product-detail-title').innerText = title;
+        document.getElementById('product-detail-price').innerText = price;
+        document.getElementById('product-detail-description').innerText = description;
+        document.getElementById('product-detail-image').src = imageUrl;
+        document.getElementById('product-detail-modal').style.display = 'block';
+    }
+
+    function closeDetailModal() {
+        document.getElementById('product-detail-modal').style.display = 'none';
+    }
+</script>
 </body>
 </html>
